@@ -1,7 +1,7 @@
 'use client'
 
 import { createStore } from 'zustand/vanilla'
-import { Lang, Theme, UserPreferences } from "@/jobApp/types/models/UserPreferences"
+import { Lang, Theme, UserPreferences } from "@/weatherForecast/types/models/UserPreferences"
 // import { getUserBrowserLang } from '../../utils/getUserBrowserLang'
 import { persist, createJSONStorage } from 'zustand/middleware'
 

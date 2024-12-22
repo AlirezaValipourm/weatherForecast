@@ -1,4 +1,4 @@
-import "@/jobApp/styles/globals.css";
+import "@/weatherForecast/styles/globals.css";
 import type { AppProps } from "next/app";
 import { UserPreferencesStoreProvider } from "../stores/UserStore/UserPreferences.provider";
 import {

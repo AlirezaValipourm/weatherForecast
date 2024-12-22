@@ -1,13 +1,12 @@
 {
-  "name": "jobapp",
-  "version": "0.1.0",
+  "name": "weatherForecast",
+  "version": "0.1.01",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "cy:open": "cypress open"
+    "lint": "next lint"
   },
   "dependencies": {
     "@cypress/react": "^8.0.2",

@@ -28,15 +28,13 @@ export const NavBar = () => {
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                         <li><Link className='text-black dark:text-slate-100' href={"/"}>{t("home")}</Link></li>
-                        <li><Link className='text-black dark:text-slate-100' href={"/jobs"}>{t("jobs")}</Link></li>
                     </ul>
                 </div>
-                <Link href={"/"} className="btn btn-ghost text-xl text-black dark:text-white">{t("applicube")}</Link>
+                <Link href={"/"} className="btn btn-ghost text-xl text-black dark:text-white">{t("cloudCompass")}</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     <li className='text-black dark:text-slate-100'><Link href={"/"}>{t("home")}</Link></li>
-                    <li className='text-black dark:text-slate-100'><Link href={"/jobs"}>{t("jobs")}</Link></li>
                 </ul>
             </div>
             <div className="navbar-end">

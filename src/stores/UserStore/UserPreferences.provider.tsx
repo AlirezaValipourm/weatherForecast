@@ -2,7 +2,7 @@
 
 import { type ReactNode, createContext, useRef, useContext } from 'react'
 import { useStore } from 'zustand'
-import { UserPreferencesStore, createUserPreferencesStore } from '@/jobApp/stores/UserStore/UserPreferences.store'
+import { UserPreferencesStore, createUserPreferencesStore } from '@/weatherForecast/stores/UserStore/UserPreferences.store'
 
 export type UserPreferenceStoreApi = ReturnType<typeof createUserPreferencesStore>
 export const UserPreferencesStoreContext = createContext<UserPreferenceStoreApi | undefined>(

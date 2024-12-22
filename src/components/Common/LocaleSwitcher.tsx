@@ -24,8 +24,7 @@ export default function LocaleSwitcher() {
     }
 
     return (
-        <select className="select select-bordered max-w-xs dark:text-white" value={lang} onChange={(e) => handleLocaleChange(e.target.value)}>
-            {/* <option disabled selected>Who shot first?</option> */}
+        <select className="select select-bordered max-w-xs text-gray-800 dark:text-white" value={lang} onChange={(e) => handleLocaleChange(e.target.value)}>
             <option value="en-US">{t("english")}</option>
             <option value="fa-IR">{t("persian")}</option>
         </select>

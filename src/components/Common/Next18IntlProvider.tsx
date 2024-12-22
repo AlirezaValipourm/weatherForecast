@@ -2,7 +2,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { FC, ReactNode, useEffect } from 'react';
 import enMessages from '../../libs/locales/en-US/common.json';
 import faMessages from '../../libs/locales/fa-IR/common.json';
-import { useUserPreferencesStore } from '@/jobApp/stores/UserStore/UserPreferences.provider';
+import { useUserPreferencesStore } from '@/weatherForecast/stores/UserStore/UserPreferences.provider';
 
 interface INextIntlProviderProps {
     children: ReactNode

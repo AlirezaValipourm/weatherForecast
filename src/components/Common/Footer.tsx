@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 import React from 'react';
 import { RiFacebookBoxFill } from "react-icons/ri";
 import { RiTwitterFill } from "react-icons/ri";
@@ -31,9 +32,8 @@ export const Footer = () => {
                     <div className="space-y-4">
                         <h3 className="text-lg font-bold text-white">{t("shortcuts")}</h3>
                         <ul className="space-y-2">
-                            <li><a href="#" className="text-sm hover:text-white">{t("home")}</a></li>
-                            <li><a href="#" className="text-sm hover:text-white">{t("jobs")}</a></li>
-                            <li><a href="#" className="text-sm hover:text-white">{t("about_us")}</a></li>
+                            <li><Link href="#" className="text-sm hover:text-white">{t("home")}</Link></li>
+                            <li><Link href="#" className="text-sm hover:text-white">{t("about_us")}</Link></li>
                         </ul>
                     </div>
 
@@ -41,9 +41,9 @@ export const Footer = () => {
                     <div className="space-y-4">
                         <h3 className="text-lg font-bold text-white">{t("support")}</h3>
                         <ul className="space-y-2">
-                            <li><a href="#" className="text-sm hover:text-white">{t("documentation")}</a></li>
-                            <li><a href="#" className="text-sm hover:text-white">{t("guides")}</a></li>
-                            <li><a href="#" className="text-sm hover:text-white">{t("help")}</a></li>
+                            <li><Link href="#" className="text-sm hover:text-white">{t("documentation")}</Link></li>
+                            <li><Link href="#" className="text-sm hover:text-white">{t("guides")}</Link></li>
+                            <li><Link href="#" className="text-sm hover:text-white">{t("help")}</Link></li>
                         </ul>
                     </div>
 
@@ -73,8 +73,8 @@ export const Footer = () => {
                             {t("rights")}
                         </div>
                         <div className="flex space-x-6">
-                            <a href="#" className="text-sm hover:text-white">{t("privacy_policy")}</a>
-                            <a href="#" className="text-sm hover:text-white">{t("terms_of_service")}</a>
+                            <Link href="#" className="text-sm hover:text-white">{t("privacy_policy")}</Link>
+                            <Link href="#" className="text-sm hover:text-white">{t("terms_of_service")}</Link>
                         </div>
                     </div>
                 </div>

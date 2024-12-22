@@ -1,5 +1,5 @@
-import { Footer } from '@/jobApp/components/Common/Footer';
-import { NavBar } from '@/jobApp/components/Common/NavBar';
+import { Footer } from '@/weatherForecast/components/Common/Footer';
+import { NavBar } from '@/weatherForecast/components/Common/NavBar';
 import { NextPage } from 'next';
 
 export const useMainLayout = (Children: NextPage) => {

@@ -2,19 +2,31 @@ import axios from 'axios';
 import { toast } from 'react-hot-toast';
 
 const api = axios.create({
-    baseURL: process.env.NEXT_PUBLIC_API_URL,
+    baseURL: process.env.NEXT_PUBLIC_WEATHER_API_BASE_URL,
     headers: {
         'Content-Type': 'application/json',
     },
 });
 
-// Request interceptor - Add auth token
 api.interceptors.request.use(
     (config) => {
-        const token = localStorage.getItem('token');
-        if (token) {
-            config.headers.Authorization = `Bearer ${token}`;
+        console.log(config)
+        if (config.baseURL == process.env.NEXT_PUBLIC_WEATHER_API_BASE_URL) {
+            const weatherApiKey = process.env.NEXT_PUBLIC_WEATHER_API_KEY;
+            config.params = {
+                ...config.params,
+                key: weatherApiKey
+            }
         }
+
+        if (config.baseURL == process.env.NEXT_PUBLIC_GEOLOCATION_API_BASE_URL) {
+            const geoApiKey = process.env.NEXT_PUBLIC_GEOLOCATION_API_KEY;
+            config.params = {
+                ...config.params,
+                key: geoApiKey
+            }
+        }
+
         return config;
     },
     (error) => Promise.reject(error)
@@ -29,7 +41,5 @@ api.interceptors.response.use(
         return Promise.reject(error);
     }
 );
-
-
 
 export { api };
